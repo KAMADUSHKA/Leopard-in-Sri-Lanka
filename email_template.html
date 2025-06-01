@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>New Tour Inquiry - Travels Go Lanka</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+        }
+        .header {
+            background: #004d00;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            border-radius: 8px 8px 0 0;
+        }
+        .header img {
+            max-width: 150px;
+        }
+        .content {
+            padding: 20px;
+            font-size: 16px;
+            color: #333;
+        }
+        .content p {
+            margin: 10px 0;
+        }
+        .content strong {
+            color: #004d00;
+        }
+        .footer {
+            text-align: center;
+            background: #222;
+            color: #fff;
+            padding: 10px;
+            font-size: 14px;
+            border-radius: 0 0 8px 8px;
+        }
+        .footer a {
+            color: #1db954;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <img src="assets/img/logo.png" alt="Travels Go Lanka Logo">
+            <h2>New Tour Inquiry</h2>
+        </div>
+
+        <!-- Email Content -->
+        <div class="content">
+            <p><strong>Name:</strong> {{name}}</p>
+            <p><strong>Email:</strong> {{email}}</p>
+            <p><strong>Phone:</strong> {{phone}}</p>
+            <p><strong>Accommodation Type:</strong> {{accommodation}}</p>
+            <p><strong>Budget:</strong> {{budget}}</p>
+            <p><strong>Tour Month:</strong> {{tourMonth}}</p>
+            <p><strong>Tour Duration:</strong> {{tourDuration}}</p>
+            <p><strong>Additional Requirements:</strong></p>
+            <p>{{requirements}}</p>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            &copy; 2025 Travels Go Lanka | <a href="https://www.travelsgolanka.com/">Visit Our Website</a>
+        </div>
+    </div>
+
+</body>
+</html>

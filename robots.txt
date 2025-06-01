@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://www.travelsgolanka.com/sitemap.xml
