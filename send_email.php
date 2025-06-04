@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->Password = 'QDNRjgJ6s8vUpPqK';
 
         // Email sender and recipients
-        $mail->setFrom('info@travelsgolanka.com', 'Travel Go Lanka');
+        $mail->setFrom('info@travelsgolanka.com', 'Leopard in Sri Lanka ');
         // $mail->addAddress('nawanjanaenda@gmail.com', 'Tharindu');
         $mail->addAddress('travelsgolanka@gmail.com');
         $mail->addAddress('info@travelsgolanka.com');
