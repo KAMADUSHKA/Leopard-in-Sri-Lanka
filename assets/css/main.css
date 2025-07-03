@@ -1062,7 +1062,7 @@ section,
 }
 
 .about .content {
-  background:linear-gradient(45deg,rgb(19, 19, 190),rgb(5, 5, 153),#fbb44a,#ff9900,#ee8c11);
+  background:linear-gradient(45deg,rgba(150, 190, 19, 0.671),rgba(152, 243, 49, 0.646),hsla(36, 96%, 64%, 0.5),hsla(36, 100%, 50%, 0.5),hsla(33, 87%, 50%, 0.5));
   background-size: 200% 200%;
   animation: gradient 5s ease infinite;
   color: var(--contrast-color);
@@ -1083,10 +1083,6 @@ section,
 
 .about .content .img-overlap {
   margin-top: -150px;
-}
-
-.about p {
-  color: var(--contrast-color);
 }
 
 .about .content-title {
@@ -2516,4 +2512,8 @@ section,
   .hylight-pharagrapM{
     padding-bottom: 10px;
     padding-top: 10px;
+  }
+
+  .recent-posts .blog {
+    min-height: 550px;
   }
