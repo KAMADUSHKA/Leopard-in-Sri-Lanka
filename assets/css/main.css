@@ -2517,3 +2517,15 @@ section,
   .recent-posts .blog {
     min-height: 550px;
   }
+
+  .tour_pack_heading {
+    background-color: rgb(79, 35, 0);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+    padding: 10px 0 5px 10px;
+  }
+
+  .tour_pack_heading h4 {
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    font-size: 20px;
+  }
