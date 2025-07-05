@@ -217,7 +217,7 @@ h6 {
 --------------------------------------------------------------*/
 .header {
   /* color: var(--default-color); */
-  background-color: rgba(255, 255, 255, 0.55) !important;
+  background-color: rgba(254, 237, 196, 0.9) !important;
   padding: 10px 0;
   transition: all 0.5s;
   z-index: 997;
@@ -770,7 +770,7 @@ section,
 --------------------------------------------------------------*/
 .section-title {
   text-align: center;
-  padding-bottom: 60px;
+  padding-bottom: 40px;
   position: relative;
 }
 
