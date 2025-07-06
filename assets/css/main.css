@@ -2529,3 +2529,11 @@ section,
     font-weight: 600;
     font-size: 20px;
   }
+
+  .Contact_icon {
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.Contact_icon:hover {
+    transform: scale(1.2);
+}
