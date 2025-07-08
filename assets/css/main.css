@@ -974,7 +974,7 @@ section,
   border: 2px solid color-mix(in srgb, var(--default-color), transparent 90%);
   box-shadow: 0 0 3px rgba(1, 0, 0, 0.7);
   position: relative;
-  height: 200px;
+  height: 260px;
   box-sizing: border-box;
 }
 
