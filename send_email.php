@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $tourMonth = htmlspecialchars($_POST["tourMonth"]);
     $tourDuration = htmlspecialchars($_POST["tourDuration"]);
     $tourVehicle = htmlspecialchars($_POST["tourVehicle"]);
-    $tourDate = htmlspecialchars($_POST["tourDate"]);
+    $tourDate = htmlspecialchars($_POST["date"]);
     $requirements = htmlspecialchars($_POST["requirements"]);
 
     $mail = new PHPMailer(true);

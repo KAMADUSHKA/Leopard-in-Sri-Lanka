@@ -2558,25 +2558,26 @@ section,
 }
 
 /* Contact Email form styles */
-.form-status {
+.get_quote_main .form-status {
   margin-bottom: 15px;
+  margin-top: 15px;
   padding: 10px;
   display: none;
   border-radius: 5px;
   font-weight: bold;
 }
-.form-status .success {
+.get_quote_main .info .success {
   color: #155724;
   background-color: #d4edda;
   border: 1px solid #c3e6cb;
 }
-.form-status .error {
+.get_quote_main .info .error {
   color: #721c24;
   background-color: #f8d7da;
   border: 1px solid #f5c6cb;
 }
 
-.contact_form .form-status.processing {
+.get_quote_main .info .processing {
   background-color: #fff3cd;
   color: #856404;
 }
