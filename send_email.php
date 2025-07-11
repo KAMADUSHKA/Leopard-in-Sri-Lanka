@@ -15,6 +15,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $budget = htmlspecialchars($_POST["budget"]);
     $tourMonth = htmlspecialchars($_POST["tourMonth"]);
     $tourDuration = htmlspecialchars($_POST["tourDuration"]);
+    $tourVehicle = htmlspecialchars($_POST["tourVehicle"]);
+    $tourDate = htmlspecialchars($_POST["tourDate"]);
     $requirements = htmlspecialchars($_POST["requirements"]);
 
     $mail = new PHPMailer(true);
@@ -22,16 +24,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {
         // Server settings
         $mail->isSMTP();
-        $mail->Host = 'smtp-relay.brevo.com'; // Brevo SMTP server
+        $mail->Host = 'smtp.hostinger.com';
         $mail->SMTPAuth = true;
         $mail->Port = 587;
-        $mail->Username = '896607001@smtp-brevo.com'; 
-        $mail->Password = 'QDNRjgJ6s8vUpPqK';
+        $mail->Username = 'info@leopardinsrilanka.com'; 
+        $mail->Password = 'leopardinSrilanka@123';
+        $mail->SMTPSecure = 'tls';
+        $mail->SMTPOptions = [
+            'ssl' => [
+                'verify_peer' => false,
+                'verify_peer_name' => false,
+                'allow_self_signed' => true
+            ]
+        ];
 
         // Email sender and recipients
         $mail->setFrom('info@leopardinsrilanka.com', 'Leopard in Sri Lanka ');
-        // $mail->addAddress('nawanjanaenda@gmail.com', 'Tharindu');
-        $mail->addAddress('leopardinsrilanka@gmail.com');
+        $mail->addAddress('visualvibegraphicslk@gmail.com');
         $mail->addAddress('info@leopardinsrilanka.com');
         $mail->addReplyTo($email, $name); // User's email for reply
 
@@ -49,6 +58,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $emailBody = str_replace('{{budget}}', $budget, $emailBody);
         $emailBody = str_replace('{{tourMonth}}', $tourMonth, $emailBody);
         $emailBody = str_replace('{{tourDuration}}', $tourDuration, $emailBody);
+        $emailBody = str_replace('{{tourVehicle}}', $tourVehicle, $emailBody);
+        $emailBody = str_replace('{{tourDate}}', $tourDate, $emailBody);
         $emailBody = str_replace('{{requirements}}', nl2br($requirements), $emailBody);
 
         // Email content

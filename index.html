@@ -150,11 +150,13 @@
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" media="print"
-    onload="this.media='all'">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" media="print">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" media="print">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- AOS CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />  
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
@@ -1354,8 +1356,8 @@
 
                 <div class="row">
                   <div class="col-md-6 mb-3">
-                    <label for="tourMonth" class="form-label">Expected vehicle Type</label>
-                    <select class="form-select" id="tourMonth" name="tourMonth">
+                    <label for="tourVehicle" class="form-label">Expected vehicle Type</label>
+                    <select class="form-select" id="tourVehicle" name="tourVehicle">
                       <option selected>Select</option>
                       <option>Toyota Prius</option>
                       <option>Toyota Premio</option>
@@ -1381,9 +1383,7 @@
               </form>
 
               <!-- Success Message -->
-              <div id="successMessage" class="alert alert-success mt-3" style="display: none;">
-                ✅ Your inquiry has been sent successfully!
-              </div>
+              <div id="formStatus" class="form-status mt-3"></div>
             </div>
           </div>
         </div>
@@ -1524,23 +1524,48 @@
 
 </script>
 
+<!-- Form Submission -->
 <script>
-  document.getElementById("contactForm").addEventListener("submit", function (event) {
-    event.preventDefault(); // Prevent form from submitting normally
+  document.getElementById('contactForm').addEventListener('submit', async function (e) {
+    e.preventDefault(); // Prevent default form submission
 
-    let formData = new FormData(this); // Get form data
-    let xhr = new XMLHttpRequest();
+    const form = e.target;
+    const formData = new FormData(form);
+    const statusDiv = document.getElementById('formStatus');
 
-    xhr.open("POST", "send_email.php", true); // Send request to PHP
-    xhr.onload = function () {
-      if (xhr.status === 200) {
-        document.getElementById("successMessage").style.display = "block"; // Show success message
-        document.getElementById("contactForm").reset(); // Clear the form
+    // Show "Processing..." message immediately
+    statusDiv.textContent = 'Processing... please wait';
+    statusDiv.className = 'form-status processing';
+    statusDiv.style.display = 'block';
+
+    try {
+      const response = await fetch('send_email.php', {
+        method: 'POST',
+        body: formData
+      });
+
+      if (response.ok) {
+        statusDiv.textContent = 'Message sent successfully!';
+        statusDiv.className = 'form-status success';
+        form.reset(); // Clear the form
       } else {
-        alert("❌ There was an error sending your request.");
+        const errorText = await response.text();
+        throw new Error(errorText);
       }
-    };
+    } catch (error) {
+      console.error(error);
+      statusDiv.textContent = 'There was a problem sending your message.';
+      statusDiv.className = 'form-status error';
+    }
 
-    xhr.send(formData); // Send form data
+    // Hide message after 3 seconds
+    setTimeout(() => {
+      statusDiv.style.display = 'none';
+    }, 3000);
   });
+
+  // Set today's date as min date
+  const today = new Date().toISOString().split('T')[0];
+  document.getElementById('date').setAttribute('min', today);
+
 </script>
