@@ -207,94 +207,114 @@
 
         <div class="container mb-5" data-aos="fade">
           <div class="col-lg-12">
-            <div class="info" id="get_quote">
-              <h3>Ready for Adventure? Plan Your Sri Lanka Escape – Free Quote in a Day!</h3>
-              <p>Fill out the form below to get started on your unforgettable journey with Leopard in Sri Lanka . Our team will respond within 24 hours to provide you with a personalized quote and help you plan your dream vacation.</p>
+            <div class="info">
+              <h3 class="text-warning">Ready for Adventure? Plan Your Sri Lanka Escape – Free Quote in a Day!</h3>
+              <p>Fill out the form below to get started on your unforgettable journey with Leopard in Sri Lanka . Our
+                team will respond within 24 hours to provide you with a personalized quote and help you plan your dream
+                vacation.</p>
               <form id="contactForm">
-                  <div class="mb-3">
-                      <label for="name" class="form-label">Name *</label>
-                      <input type="text" class="form-control" id="name" name="name" required>
+                <div class="mb-3">
+                  <label for="name" class="form-label">Name *</label>
+                  <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label for="email" class="form-label">Email *</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
                   </div>
-      
-                  <div class="row">
-                      <div class="col-md-6 mb-3">
-                          <label for="email" class="form-label">Email *</label>
-                          <input type="email" class="form-control" id="email" name="email" required>
-                      </div>
-                      <div class="col-md-6 mb-3">
-                          <label for="phone" class="form-label">Phone Number (Optional)</label>
-                          <div class="input-group">
-                              <!-- <span class="input-group-text">🇱🇰</span> -->
-                              <input type="text" class="form-control" id="phone" name="phone" placeholder="+94 71 234 5678">
-                          </div>
-                      </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="phone" class="form-label">Phone Number (Optional)</label>
+                    <div class="input-group">
+                      <input type="text" class="form-control" id="phone" name="phone" placeholder="+94 71 234 5678">
+                    </div>
                   </div>
-      
-                  <div class="row">
-                      <div class="col-md-6 mb-3">
-                          <label for="accommodation" class="form-label">Accommodation type *</label>
-                          <select class="form-select" id="accommodation" name="accommodation" required>
-                              <option selected>Select</option>
-                              <option>Guest houses</option>
-                              <option>2 star hotels & Guest houses</option>
-                              <option>3 star hotels & resorts</option>
-                              <option>4 star hotels & resorts</option>
-                              <option>5 star hotels & resorts</option>
-                              <option>Luxury boutiques</option>
-                          </select>
-                      </div>
-                      <div class="col-md-6 mb-3">
-                          <label for="budget" class="form-label">Budget without airfare - USD ($) *</label>
-                          <select class="form-select" id="budget" name="budget" required>
-                              <option selected>Select</option>
-                              <option>Below 500$</option>
-                              <option>500$ - 1000$</option>
-                              <option>1000$ - 2000$</option>
-                              <option>2000$ - 3000$</option>
-                              <option>3000$ - 5000$</option>
-                              <option>Above 5000$</option>
-                          </select>
-                      </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label for="accommodation" class="form-label">Accommodation type *</label>
+                    <select class="form-select" id="accommodation" name="accommodation" required>
+                      <option selected>Select</option>
+                      <option>Guest houses</option>
+                      <option>2 star hotels & Guest houses</option>
+                      <option>3 star hotels & resorts</option>
+                      <option>4 star hotels & resorts</option>
+                      <option>5 star hotels & resorts</option>
+                      <option>Luxury boutiques</option>
+                    </select>
                   </div>
-      
-                  <div class="row">
-                      <div class="col-md-6 mb-3">
-                          <label for="tourMonth" class="form-label">Tour Month *</label>
-                          <select class="form-select" id="tourMonth" name="tourMonth" required>
-                              <option selected>Select</option>
-                              <option>January</option>
-                              <option>February</option>
-                              <option>March</option>
-                              <option>April</option>
-                              <option>May</option>
-                              <option>June</option>
-                              <option>July</option>
-                              <option>August</option>
-                              <option>September</option>
-                              <option>October</option>
-                              <option>November</option>
-                              <option>December</option>
-                          </select>
-                      </div>
-                      <div class="col-md-6 mb-3">
-                          <label for="tourDuration" class="form-label">Tour duration *</label>
-                          <input type="text" class="form-control" id="tourDuration" name="tourDuration" placeholder="7 Days" required>
-                      </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="budget" class="form-label">Budget without airfare - USD ($) *</label>
+                    <select class="form-select" id="budget" name="budget" required>
+                      <option selected>Select</option>
+                      <option>Below 500$</option>
+                      <option>500$ - 1000$</option>
+                      <option>1000$ - 2000$</option>
+                      <option>2000$ - 3000$</option>
+                      <option>3000$ - 5000$</option>
+                      <option>Above 5000$</option>
+                    </select>
                   </div>
-      
-                  <div class="mb-3">
-                      <label for="requirements" class="form-label">Your requirements (No of adults & kids, Interests) *</label>
-                      <textarea class="form-control" id="requirements" name="requirements" rows="2" required></textarea>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label for="tourMonth" class="form-label">Tour Month *</label>
+                    <select class="form-select" id="tourMonth" name="tourMonth" required>
+                      <option selected>Select</option>
+                      <option>January</option>
+                      <option>February</option>
+                      <option>March</option>
+                      <option>April</option>
+                      <option>May</option>
+                      <option>June</option>
+                      <option>July</option>
+                      <option>August</option>
+                      <option>September</option>
+                      <option>October</option>
+                      <option>November</option>
+                      <option>December</option>
+                    </select>
                   </div>
-      
-                  <button type="submit" class="btn btn-warning text-light">Submit</button>
+                  <div class="col-md-6 mb-3">
+                    <label for="tourDuration" class="form-label">Tour duration *</label>
+                    <input type="text" class="form-control" id="tourDuration" name="tourDuration" placeholder="7 Days"
+                      required>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label for="tourVehicle" class="form-label">Expected vehicle Type</label>
+                    <select class="form-select" id="tourVehicle" name="tourVehicle">
+                      <option selected>Select</option>
+                      <option>Toyota Prius</option>
+                      <option>Toyota Premio</option>
+                      <option>Honda Vezel</option>
+                      <option>Toyota KDH Van</option>
+                      <option>Toyota KDH Van High Roof</option>
+                      <option>Rosa A/C Bus</option>
+                      <option>A/C Luxury Bus</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="date" class="form-label">Date</label>
+                    <input type="date" class="form-control" id="date" name="date" placeholder="">
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="requirements" class="form-label">Your requirements (No of adults & kids, Interests) *</label>
+                  <textarea class="form-control" id="requirements" name="requirements" rows="2" required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-warning text-light">Submit</button>
               </form>
-      
+
               <!-- Success Message -->
-              <div id="successMessage" class="alert alert-success mt-3" style="display: none;">
-                  ✅ Your inquiry has been sent successfully!
-              </div>
-          </div>
+              <div id="formStatus" class="form-status mt-3"></div>
+            </div>
           </div>
         </div>
 
@@ -474,23 +494,49 @@
 
 </script>
 
+
+<!-- Form Submission -->
 <script>
-  document.getElementById("contactForm").addEventListener("submit", function(event) {
-      event.preventDefault(); // Prevent form from submitting normally
-  
-      let formData = new FormData(this); // Get form data
-      let xhr = new XMLHttpRequest(); 
-  
-      xhr.open("POST", "send_email.php", true); // Send request to PHP
-      xhr.onload = function() {
-          if (xhr.status === 200) {
-              document.getElementById("successMessage").style.display = "block"; // Show success message
-              document.getElementById("contactForm").reset(); // Clear the form
-          } else {
-              alert("❌ There was an error sending your request.");
-          }
-      };
-  
-      xhr.send(formData); // Send form data
+  document.getElementById('contactForm').addEventListener('submit', async function (e) {
+    e.preventDefault(); // Prevent default form submission
+
+    const form = e.target;
+    const formData = new FormData(form);
+    const statusDiv = document.getElementById('formStatus');
+
+    // Show "Processing..." message immediately
+    statusDiv.textContent = 'Processing... please wait';
+    statusDiv.className = 'form-status processing';
+    statusDiv.style.display = 'block';
+
+    try {
+      const response = await fetch('send_email.php', {
+        method: 'POST',
+        body: formData
+      });
+
+      if (response.ok) {
+        statusDiv.textContent = 'Message sent successfully!';
+        statusDiv.className = 'form-status success';
+        form.reset(); // Clear the form
+      } else {
+        const errorText = await response.text();
+        throw new Error(errorText);
+      }
+    } catch (error) {
+      console.error(error);
+      statusDiv.textContent = 'There was a problem sending your message.';
+      statusDiv.className = 'form-status error';
+    }
+
+    // Hide message after 3 seconds
+    setTimeout(() => {
+      statusDiv.style.display = 'none';
+    }, 3000);
   });
+
+  // Set today's date as min date
+  const today = new Date().toISOString().split('T')[0];
+  document.getElementById('date').setAttribute('min', today);
+
 </script>
