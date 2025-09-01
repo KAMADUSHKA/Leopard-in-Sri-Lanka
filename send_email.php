@@ -39,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         ];
 
         // Email sender and recipients
-        $mail->setFrom('info@leopardinsrilanka.com', 'Leopard in Sri Lanka ');
+        $mail->setFrom('info@leopardinsrilanka.com', 'Leopard Safari Tours In Sri Lanka ');
         $mail->addAddress('visualvibegraphicslk@gmail.com');
         $mail->addAddress('info@leopardinsrilanka.com');
         $mail->addReplyTo($email, $name); // User's email for reply
